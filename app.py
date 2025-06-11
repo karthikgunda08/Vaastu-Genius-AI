@@ -11,9 +11,6 @@ UPLOAD_FOLDER = 'uploads'
 OVERLAY_FOLDER = 'overlays'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OVERLAY_FOLDER, exist_ok=True)
-@app.route('/')
-def home():
-    return "✅ Vaastu Genius AI Backend is Live!"
 
 # --- Admin Credentials (example only, use hashed passwords in production) ---
 ADMIN_USER = "Karthik Gunda"
@@ -84,3 +81,6 @@ def analyze_floorplan(image_path, filename):
 
 if __name__ == '__main__':
     app.run(debug=True)
+@app.route('/')
+def home():
+    return "✅ Vaastu Genius AI Backend is Live!"
